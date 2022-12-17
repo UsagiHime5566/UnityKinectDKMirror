@@ -1,0 +1,16 @@
+{
+    "name": "USFB.Runtime.Mac",
+    "references": [
+        "USFB.Runtime.Common"
+    ],
+    "optionalUnityReferences": [],
+    "includePlatforms": [
+        "macOSStandalone"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": []
+}

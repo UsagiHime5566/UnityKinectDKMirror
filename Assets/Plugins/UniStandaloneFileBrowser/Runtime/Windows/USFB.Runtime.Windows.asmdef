@@ -1,0 +1,17 @@
+{
+    "name": "USFB.Runtime.Windows",
+    "references": [
+        "USFB.Runtime.Common"
+    ],
+    "optionalUnityReferences": [],
+    "includePlatforms": [
+        "WindowsStandalone32",
+        "WindowsStandalone64"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": []
+}
