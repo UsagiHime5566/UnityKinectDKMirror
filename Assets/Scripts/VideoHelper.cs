@@ -9,6 +9,7 @@ public class VideoHelper : MonoBehaviour
 {
     public VideoPlayer videoPlayer;
     public Transform VideoCanvas;
+    public GameObject VideoGameObject;
 
     public void SetupVideo(string filePath){
         videoPlayer.url = filePath;
@@ -19,7 +20,7 @@ public class VideoHelper : MonoBehaviour
         videoPlayer.prepareCompleted += delegate {
             Debug.Log($"Get video size: {videoPlayer.texture.width}x{videoPlayer.texture.height}");
             VideoCanvas.localScale = new Vector3(videoPlayer.texture.width/5000f, 1, videoPlayer.texture.height/5000f);
-            VideoCanvas.gameObject.SetActive(true);
+            VideoGameObject.SetActive(true);
         };
             
         videoPlayer.Play();
@@ -27,6 +28,6 @@ public class VideoHelper : MonoBehaviour
 
     public void CloseVideo(){
         videoPlayer.Stop();
-        VideoCanvas.gameObject.SetActive(false);
+        VideoGameObject.SetActive(false);
     }
 }

@@ -8,7 +8,7 @@ using TMPro;
 // 要把全版Raycast Target 關掉
 
 // OnMouseDown 當你場上不只一個攝影機時，所有攝影機都會觸發
-// IPointerDown 可以限制只有哪個攝影機可以按, 需要的有 1.攝影機掛Raycaster / 2.要發生事件的物體掛上 Interface 與 Collider / 3.實作上述Interface
+// IPointerDown 可以限制只有哪個攝影機可以按, 需要的有 1.攝影機掛Raycaster / 2.要發生事件的物體掛上 Interface 與 Collider / 3.實作上述Interface / 4.記得Raycaster 上的Mask有沒有設定
 
 public class VideoPosCon : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
 {
@@ -33,7 +33,7 @@ public class VideoPosCon : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
         //Debug.Log($"Get data:{v}");
     }
 
-    void IPointerDownHandler.OnPointerDown(PointerEventData eventData)
+    public void OnPointerDown(PointerEventData eventData)
     {
         lastPointDown = Input.mousePosition;
         lastObjectPosition = transform.position;
@@ -48,7 +48,7 @@ public class VideoPosCon : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
         //Debug.Log(this.gameObject.name + " Was Point.");
     }
 
-    void IPointerUpHandler.OnPointerUp(PointerEventData eventData)
+    public void OnPointerUp(PointerEventData eventData)
     {
         isLeftMouseDown = false;
         isRightMouseDown = false;
