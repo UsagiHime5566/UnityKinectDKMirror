@@ -47,6 +47,10 @@ public class ModelPosCon : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
 
     void Update()
     {
+        if(Input.GetKey(KeyCode.LeftAlt)){
+            return;
+        }
+        
         if(Input.mouseScrollDelta.y != 0 && isLeftMouseDown){
             var v = transform.localScale;
             float scale = (1 + Input.mouseScrollDelta.y * 0.1f);

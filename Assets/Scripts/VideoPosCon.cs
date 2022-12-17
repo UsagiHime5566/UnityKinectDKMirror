@@ -58,6 +58,10 @@ public class VideoPosCon : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
 
     void Update()
     {
+        if(Input.GetKey(KeyCode.LeftAlt)){
+            return;
+        }
+        
         if(Input.mouseScrollDelta.y != 0 && isLeftMouseDown){
             //Debug.Log(Input.mouseScrollDelta.y);
 
