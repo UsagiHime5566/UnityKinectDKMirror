@@ -90,4 +90,4 @@ crashlytics-build.properties
 /cudart64_110.dll
 /cudnn64_8.dll
 /onnxruntime_providers_shared.dll
-/Assets/AzureKinectExamples/SDK/Kinect4AzureSDK/Plugins/onnxruntime_providers_cuda.dll
+# /Assets/AzureKinectExamples/SDK/Kinect4AzureSDK/Plugins/onnxruntime_providers_cuda.dll
